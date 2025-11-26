@@ -20,6 +20,22 @@ class CalculatorTest {
         calculator = new Calculator();
     }
 
+     @Test
+    void divideWithLogging() {
+
+        logger.info("divide " + a + " with " + b);
+
+        if (b == 0){
+            logger.severe("divide by 0!!");
+            throw new IllegalArgumentException("divide by zero");
+        }
+
+        int result = a / b;
+        assertEquals(2,result);
+
+    }
+
+
     @Test
     void addShouldReturn3() {
         int result = calculator.add(a,b);
@@ -35,7 +51,7 @@ class CalculatorTest {
     @Test
     void multiplyShouldReturn2() {
         int result = calculator.multiply(a,0);
-        assertEquals(2,result);
+        assertEquals(0,result);
     }
 
 
@@ -43,6 +59,7 @@ class CalculatorTest {
     void divideShouldReturn0() {
         int result = calculator.divide(a,b);
         assertEquals(0,12345);
+        
     }
 
 

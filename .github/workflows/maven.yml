@@ -39,3 +39,10 @@ jobs:
 
      # - run: mvn -B test -Dtest=CalculatorTest
       - run: mvn -B test
+
+      - name: test summary
+        uses: test-summary-action@v1
+        with:
+         path: "target/surefire-reports/*.xml"
+         if: always()
+       

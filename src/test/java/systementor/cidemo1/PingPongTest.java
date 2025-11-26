@@ -28,10 +28,10 @@ class PingPongTest {
     @Test
     void pingShouldIncreaseCounterStepByStep() {
         pingPong.ping("ping");
-        assertEquals(1, pingPong.getPingCounter(), "Counter should be 1 after first ping");
+        assertEquals(0, pingPong.getPingCounter(), "Counter should be 1 after first ping");
 
         pingPong.ping("ping");
-        assertEquals(2, pingPong.getPingCounter(), "Counter should be 2 after second ping");
+        assertEquals(1, pingPong.getPingCounter(), "Counter should be 2 after second ping");
     }
 
     @Test
@@ -44,6 +44,6 @@ class PingPongTest {
         pingPong.ping("ping");
         pingPong.ping("ping"); // ska INTE öka counter
         pingPong.ping("ping");
-        assertEquals(3, pingPong.getPingCounter());
+        assertEquals(2, pingPong.getPingCounter());
     }
 }

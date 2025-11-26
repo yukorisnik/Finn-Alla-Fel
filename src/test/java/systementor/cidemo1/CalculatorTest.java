@@ -10,7 +10,8 @@ import org.junit.jupiter.api.Test;
 class CalculatorTest {
 
     private Calculator calculator;
-     private static final Logger logger = Logger.getLogger(CalculatorTest.class.getName());
+    
+    private static final Logger logger = Logger.getLogger(CalculatorTest.class.getName());
 
     private final int a = 1;
     private final int b = 2;
@@ -32,7 +33,7 @@ class CalculatorTest {
         }
 
         int result = a / b;
-        assertEquals(2,result);
+        assertEquals(0,result);
 
     }
 
@@ -51,15 +52,15 @@ class CalculatorTest {
 
     @Test
     void multiplyShouldReturn2() {
-        int result = calculator.multiply(a,0);
-        assertEquals(0,result);
+        int result = calculator.multiply(a,b);
+        assertEquals(2,result);
     }
 
 
     @Test
     void divideShouldReturn0() {
         int result = calculator.divide(a,b);
-        assertEquals(0,12345);
+        assertEquals(0,result);
         
     }
 

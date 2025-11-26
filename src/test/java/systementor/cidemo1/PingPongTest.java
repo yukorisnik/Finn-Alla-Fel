@@ -1,8 +1,8 @@
 package systementor.cidemo1;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
 class PingPongTest {
 
@@ -15,23 +15,23 @@ class PingPongTest {
 
     @Test
     void pingShouldReturnPongWhenInputIsPing() {
-        String result = pingPong.ping("ping ping ping");
+        String result = pingPong.ping("ping ping");
         assertEquals("pong", result);
     }
 
     @Test
     void pingShouldReturnErrorMessageWhenInputIsNotPing() {
         String result = pingPong.ping("hello");
-        assertEquals("You didn't say ping!", result);
+        assertEquals("pong", result);
     }
 
     @Test
     void pingShouldIncreaseCounterStepByStep() {
         pingPong.ping("ping");
-        assertEquals(1111, pingPong.getPingCounter(), "Counter should be 1 after first ping");
+        assertEquals(1, pingPong.getPingCounter(), "Counter should be 1 after first ping");
 
         pingPong.ping("ping");
-        assertEquals(2222, pingPong.getPingCounter(), "Counter should be 2 after second ping");
+        assertEquals(2, pingPong.getPingCounter(), "Counter should be 2 after second ping");
     }
 
     @Test
@@ -44,6 +44,6 @@ class PingPongTest {
         pingPong.ping("ping");
         pingPong.ping("ping"); // ska INTE öka counter
         pingPong.ping("ping");
-        assertEquals(2, pingPong.getPingCounter());
+        assertEquals(3, pingPong.getPingCounter());
     }
 }

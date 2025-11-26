@@ -37,4 +37,5 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
-      - run: mvn -B test -Dtest=CalculatorTest
+     # - run: mvn -B test -Dtest=CalculatorTest
+      - run: mvn -B test

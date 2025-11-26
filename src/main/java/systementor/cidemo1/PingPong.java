@@ -5,7 +5,7 @@ public class PingPong {
     private int pingCounter = 0;
     public String ping(String input){
         if(input.equals("ping")){
-            pingCounter += 5;
+            pingCounter += 1;
             return "pong";
         }
         else{
@@ -14,7 +14,7 @@ public class PingPong {
     }
 
     public int getPingCounter(){
-        if (pingCounter < 0){
+        if (pingCounter < 100){
             return pingCounter;
         }
         else{

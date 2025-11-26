@@ -1,15 +1,16 @@
 package systementor.cidemo1;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-
 import java.util.logging.Logger;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 class CalculatorTest {
 
     private Calculator calculator;
+     private static final Logger logger = Logger.getLogger(CalculatorTest.class.getName());
 
     private final int a = 1;
     private final int b = 2;

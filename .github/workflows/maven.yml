@@ -39,7 +39,7 @@ jobs:
       - run: mvn -B test
 
       - name: test summary
-        uses: test-summary-action@v2
+        uses: finn-alla-fel/action@v2
         with:
-          path: "target/surefire-reports/*.xml"
+          path: "target/reports/*.xml"
           if: always()

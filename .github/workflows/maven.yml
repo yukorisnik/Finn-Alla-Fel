@@ -39,7 +39,7 @@ jobs:
       - run: mvn -B test
 
       - name: test summary
-        uses: finn-alla-fel/action@v2
+        uses: actions/upload-artifact@v3 #Finn-Alla-Fel/action@v2
         with:
           path: "target/reports/*.xml"
-          if: always()
+         # if: always()

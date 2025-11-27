@@ -38,8 +38,8 @@ jobs:
       # - run: mvn -B test -Dtest=CalculatorTest
       - run: mvn -B test
 
-      - name: test summary
-        uses: actions/upload-artifact@v3 #Finn-Alla-Fel/action@v2
+      - name: Test Summary
+        uses: test-summary/action@v2
         with:
-          path: "target/reports/*.xml"
-         # if: always()
+          paths: "target/surefire-reports/*.xml"
+
